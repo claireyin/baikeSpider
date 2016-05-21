@@ -11,7 +11,7 @@ class HtmlOutputer(object):
         self.datas.append(data)
 
     def output_html(self):
-        fout = open('output.html','w',encoding='utf-8')
+        fout = open('output.html','w')
         fout.write("<html>")
         fout.write("<body>")
         fout.write("<table>")
