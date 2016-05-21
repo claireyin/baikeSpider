@@ -15,12 +15,12 @@ class HtmlOutputer(object):
         fout.write("<html>")
         fout.write("<body>")
         fout.write("<table>")
-        
+        encoding='gb18030'
         for data in self.datas:
             fout.write("<tr>")
             fout.write("<td>%s</td>" % data['url'])
-            fout.write("<td>%s</td>" % data['title'].encode('utf-8'))
-            fout.write("<td>%s</td>" % data['summary'].encode('utf-8'))
+            fout.write("<td>%s</td>" % data['title'].encode(encoding))
+            fout.write("<td>%s</td>" % data['summary'].encode(encoding))
             fout.write("</tr>")
         fout.write("</table>")
         fout.write("</body")
